@@ -22,8 +22,7 @@ body  {
   font-size: 15px;
   line-height: 28px;
   background-color: #f2f2f2;
-  background-image: url("../img/frame-bg\ left.svg"),
-  url("../img/frame-bg\ right.svg");
+  background-image: url("../img/frame-bg\ left.svg"), url("../img/frame-bg\ right.svg");
   background-position: left -120px  bottom -460px,
   right -100px top -100px ;
   background-repeat: no-repeat;
@@ -114,6 +113,61 @@ img {
   margin-bottom: 40px;
   font-size: 32px;
 }
+
+/* Radio */
+.pricing-switch {
+  margin-bottom: 64px;
+}
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch-label {
+  font-size: 15px;
+  line-height: 28px;
+  color: rgba(110, 114, 142, 0.5);
+  cursor: pointer;
+}
+.switch-label:hover {
+  color: #6e728e;
+}
+.switch-control {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 4px;
+  background-color: #696EDD;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696edd 100%);
+}
+.switch-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: margin 0.2s ease;
+}
+.switch-control-annual,
+.switch-control-monthly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.switch-input-annual:checked ~ .switch-control .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control .switch-control-annual
+{
+  z-index: 5;
+}
+.switch-input-monthly:checked ~ .switch-control .switch-circle {
+  margin-left: 24px;
+}
+
 .pricing {
   width: 100%;
 }
